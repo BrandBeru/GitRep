@@ -7,8 +7,10 @@ export default function ProfileInfo() {
 
   const router = useRouter()
 
+  const auth = useAuth()
+
   useEffect(() => {
-    setUser(useAuth()?.user)
+    setUser(auth?.user)
   }, [router?.isReady])
 
   return (
